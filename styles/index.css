@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@700&display=swap");
+
+html {
+  background-color: #e4e4e6;
+}
+.heading {
+  font-family: "KoHo", sans-serif;
+  color: #4f2811;
+}
+.cover {
+  background-color: #e4e4e6 !important;
+
+  background-image: url("../assets/home/cover.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.headertitle {
+  font-family: "Fredoka One", cursive;
+  color: white;
+  text-align: left;
+}
+
+.about {
+  justify-content: center;
+  text-align: center;
+  margin-top: 2em;
+}
+/* phones, 600px and down */
+@media only screen and (max-width: 600px) {
+  .headertitle {
+    font-size: 25px;
+  }
+  .donutimg {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover {
+    padding-bottom: 60px;
+    border-bottom-left-radius: 30% 10%;
+    border-bottom-right-radius: 30% 10%;
+  }
+}
+
+/* portrait tablets and large phones, 600px and up */
+@media only screen and (min-width: 600px) {
+  .headertitle {
+    font-size: 30px;
+  }
+  .donutimg {
+    width: 250px;
+  }
+  .cover {
+    padding-bottom: 60px;
+    border-bottom-left-radius: 30% 15%;
+    border-bottom-right-radius: 30% 15%;
+  }
+}
+
+/* laptops/desktops, 992px and up */
+@media only screen and (min-width: 992px) {
+  .headertitle {
+    font-size: 40px;
+  }
+  .donutimg {
+    width: 250px;
+  }
+  .cover {
+    padding-bottom: 80px;
+    border-bottom-left-radius: 25% 20%;
+    border-bottom-right-radius: 25% 20%;
+  }
+}
+
+/*large laptops and desktops, 1200px and up */
+@media only screen and (min-width: 1200px) {
+  .headertitle {
+    font-size: 50px;
+  }
+  .donutimg {
+    width: 300px;
+  }
+  .cover {
+    padding-bottom: 100px;
+    border-bottom-left-radius: 50% 25%;
+    border-bottom-right-radius: 50% 25%;
+  }
+}
+.feature {
+  border-radius: 20px;
+}
