@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=KoHo:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 .heading {
   font-family: "KoHo", sans-serif;
   color: #30d5c8;
@@ -25,6 +25,48 @@
   text-align: center;
   margin-top: 2em;
 }
+.count {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4em;
+  color: #2e0854;
+  text-shadow: 1px 1px 5px #fff, 1px 1px 5px #ccc;
+}
+.counter {
+  text-align: center;
+}
+
+.counterdiv {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature {
+  border-radius: 30px;
+  transition: 0.5s;
+  box-shadow: 0px 10px 20px rgba(34, 35, 58, 0.2);
+  margin-bottom: 1em;
+}
+.feature:hover {
+  box-shadow: 0px 10px 20px rgba(34, 35, 58, 0.3);
+  transform: scale(1.02);
+}
+.parallax {
+  background-image: url("../assets/home/donutbg4.png");
+  min-height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.counterround {
+  margin-left: auto;
+  margin-right: auto;
+}
+h6 {
+  color: #2e0854;
+  text-shadow: 1px 1px 2px #fff, 1px 1px 2px #ccc;
+}
 /* phones, 600px and down */
 @media only screen and (max-width: 600px) {
   .headertitle {
@@ -41,6 +83,18 @@
     border-bottom-left-radius: 30% 10%;
     border-bottom-right-radius: 30% 10%;
   }
+  .count {
+    font-size: 25px;
+  }
+  .counterround img {
+    width: 40px;
+  }
+  .counterround {
+    width: 70px;
+  }
+  .parallax {
+    padding-top: 60px;
+  }
 }
 
 /* portrait tablets and large phones, 600px and up */
@@ -55,6 +109,21 @@
     padding-bottom: 60px;
     border-bottom-left-radius: 30% 15%;
     border-bottom-right-radius: 30% 15%;
+  }
+  .count {
+    font-size: 45px;
+  }
+  .counterround {
+    width: 130px;
+  }
+  .parallax {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .parallax {
+    min-height: 250px;
   }
 }
 
@@ -71,6 +140,15 @@
     border-bottom-left-radius: 25% 20%;
     border-bottom-right-radius: 25% 20%;
   }
+  .parallax {
+    padding-top: 110px;
+  }
+  .counterround {
+    width: 130px;
+  }
+  .counterround img {
+    width: 60px;
+  }
 }
 
 /*large laptops and desktops, 1200px and up */
@@ -86,15 +164,11 @@
     border-bottom-left-radius: 50% 25%;
     border-bottom-right-radius: 50% 25%;
   }
-}
-
-.feature {
-  border-radius: 30px;
-  transition: 0.5s;
-  box-shadow: 0px 10px 20px rgba(34, 35, 58, 0.2);
-  margin-bottom: 1em;
-}
-.feature:hover {
-  box-shadow: 0px 10px 20px rgba(34, 35, 58, 0.3);
-  transform: scale(1.02);
+  .parallax {
+    padding-top: 70px;
+  }
+  .counterround {
+    width: 160px;
+    padding: 10px;
+  }
 }
