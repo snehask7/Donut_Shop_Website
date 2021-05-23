@@ -8,7 +8,7 @@
   margin-right: 1em;
 }
 
-.active {
+.activenav {
   background-color: #30d5c8 !important;
   border-radius: 30px !important;
 }
@@ -23,7 +23,7 @@
   .navbar {
     background-color: rgba(23, 162, 184, 0.9) !important;
   }
-  .active {
+  .activenav {
     background-color: transparent !important;
   }
   .selected {
