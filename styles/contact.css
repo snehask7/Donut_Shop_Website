@@ -1,0 +1,188 @@
+.headerdiv {
+  background: linear-gradient(270deg, #b66ac6, #cf4296, #de7609);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 240px;
+  text-align: center;
+  padding-top: 125px;
+}
+
+h1 {
+  color: white;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 {
+  top: 0;
+}
+.ml1 .line2 {
+  bottom: 0;
+}
+
+.contactbg {
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  margin-bottom: 3em;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  padding: 20px;
+}
+.contactinfo {
+  padding: 20px;
+  text-align: center !important;
+  width: auto;
+  margin-top: 30%;
+}
+@media (max-width: 1060px) {
+  .contactbg {
+    width: 80%;
+  }
+  .contactinfo {
+    padding: 30px;
+  }
+}
+@media (max-width: 884px) {
+  .contactbg {
+    width: 90%;
+  }
+  .contactinfo {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contactbg {
+    width: 60%;
+  }
+  .contactinfo {
+    padding: 20px;
+    margin-left: 10%;
+    margin-top: 0%;
+  }
+}
+@media (max-width: 767.5px) {
+  .vline {
+    display: none;
+  }
+}
+
+@media (max-width: 530px) {
+  .contactbg {
+    width: 80%;
+  }
+  .contactinfo {
+    padding: 10px;
+  }
+}
+@media (max-width: 412px) {
+  .contactbg {
+    width: 90%;
+  }
+  .contactinfo {
+    padding: -5px;
+  }
+}
+
+h3,
+h5,
+h4 {
+  color: white;
+  text-align: left;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.inputtext {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.3s border-color;
+}
+.inputtext:hover {
+  border: 1px solid #aaa;
+}
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.06);
+  height: 80px;
+}
+a {
+  color: white;
+}
+
+.card {
+  padding: 30px;
+}
+.submitbutton {
+  width: 120px;
+  border-radius: 20px !important;
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border: none !important;
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(10px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
