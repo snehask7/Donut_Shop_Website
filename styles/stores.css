@@ -69,7 +69,8 @@ h1 {
 .store {
   border-radius: 20px;
   margin-top: 1em;
-  margin-right: 1em;
+  margin-right: auto;
+  margin-left: auto;
 }
 .store:hover {
   cursor: pointer;
