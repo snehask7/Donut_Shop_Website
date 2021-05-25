@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&family=Yanone+Kaffeesatz:wght@600&display=swap");
 .headerdiv {
   background: linear-gradient(270deg, #b66ac6, #cf4296, #de7609);
   background-size: 400% 400%;
@@ -7,6 +8,14 @@
   padding-top: 125px;
 }
 
+body {
+  background-image: url("../assets/contactbg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 h1 {
   color: white;
 }
@@ -73,6 +82,7 @@ h1 {
   text-align: center !important;
   width: auto;
   margin-top: 30%;
+  font-family: "Merriweather Sans", sans-serif;
 }
 @media (max-width: 1060px) {
   .contactbg {
@@ -191,4 +201,12 @@ a {
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+}
+.card-title {
+  background: #ff416c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #ff416c, #ff4b2b);
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }

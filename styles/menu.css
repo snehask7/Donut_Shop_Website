@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Quicksand:wght@600&family=Sansita+Swashed&family=Yanone+Kaffeesatz:wght@600&display=swap");
 .headerdiv {
   background: linear-gradient(270deg, #b66ac6, #cf4296, #de7609);
   background-size: 400% 400%;
@@ -64,14 +65,29 @@ h1 {
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.2s ease-in-out;
 }
 
+.menucard:hover {
+  transform: scale(1.1);
+}
 .menucard img {
   width: 140px;
   height: 140px;
   margin-top: -85px;
 }
+.donutimg {
+  animation: rotation 14s infinite linear;
+}
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .menucontainer {
   margin-bottom: 5em;
   margin-top: 2em;
@@ -84,4 +100,13 @@ h1 {
   border: none;
   width: 80px;
   padding: 5px;
+  font-family: "Quicksand", sans-serif;
+}
+
+h5 {
+  font-family: "Sansita Swashed", cursive;
+}
+
+.menucard p {
+  font-family: "Catamaran", sans-serif;
 }
