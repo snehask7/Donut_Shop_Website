@@ -22,7 +22,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="./styles/stores.css">
+  <link rel="stylesheet" href="./styles/order.css">
   <link rel="stylesheet" href="./styles/nav.css">
   <link rel="stylesheet" href="./styles/footer.css">
   <!-- Glider -->
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onload="displayItems()">
   <div>
     <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background:rgba(23, 162, 184, 1)">
       <img width="200" class="logo" src="./assets/donutlogo.png" alt="menu"></img>
@@ -46,8 +46,8 @@
           <ul class="navbar-nav mr-auto navbar-right mt-2 mt-lg-0">
             <li class="nav-item "><a class="nav-link btn" href="./index.html">Home</a></li>
             <li class="nav-item "><a class="nav-link btn " href="./menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link  btn activenav" href="./stores.html">Stores</a></li>
-            <li class="nav-item"><a class="nav-link  btn " href="./order.html">Order</a></li>
+            <li class="nav-item"><a class="nav-link  btn " href="./stores.html">Stores</a></li>
+            <li class="nav-item"><a class="nav-link  btn activenav" href="./order.html">Order</a></li>
             <li class="nav-item "><a class="nav-link btn " href="./contact.html">Contact</a></li>
           </ul>
         </form>
@@ -59,70 +59,26 @@
       <h1 class="ml1">
         <span class="text-wrapper">
           <span class="line line1"></span>
-          <span class="letters">STORES</span>
+          <span class="letters">ORDER</span>
           <span class="line line2"></span>
         </span>
       </h1>
     </div>
-    <div class="container storecontainer" data-aos="zoom-in-right">
+    <div class="container ordercontainer" data-aos="zoom-in-right">
       <div class="row text-center">
-        <div class="col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3 order-2 order-sm-2 order-lg-1 order-md-1 order-xl-1"
-          style="overflow-y:scroll;height:450px;">
-          <div class="row text-center">
-            <div class="store card selectedstore" onclick="changemap(0)">
-              <div class="card-body">
-                <h5 class="card-title">Marina Mall</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2nd floor, next to taco bell</h6>
-                <hr>
-                <p class="card-text text-left phone"> <a href="#" class="fa fa-phone"></a>&nbsp;4774773883<br> <a
-                    href="#" class="fa fa-clock-o"></a>&nbsp;10:00 AM - 10:00 PM<br>
-                  <a href="#" class="fa fa-map-marker"></a>&nbsp;Navallur
-                </p>
+        <div class="col-12 col-sm-6 col-lg-6 col-md-6 col-xl-6 order-2 order-sm-1 order-lg-1 order-md-1 order-xl-1"
+          style="overflow-y:scroll;height:650px;">
+          <div class="row text-center menuitems" id="menuitems">
 
-              </div>
-            </div>
-            <div class="store card " onclick="changemap(1)">
-              <div class="card-body">
-                <h5 class="card-title">Express Avenue</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2nd floor, next to taco bell</h6>
-                <hr>
-                <p class="card-text text-left phone"> <a href="#" class="fa fa-phone"></a>&nbsp;4774773883<br> <a
-                    href="#" class="fa fa-clock-o"></a>&nbsp;10:00 AM - 10:00 PM<br>
-                  <a href="#" class="fa fa-map-marker"></a>&nbsp;Navallur
-                </p>
-
-              </div>
-            </div>
-            <div class="store card " onclick="changemap(2)">
-              <div class="card-body">
-                <h5 class="card-title">VR Mall</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2nd floor, next to taco bell</h6>
-                <hr>
-                <p class="card-text text-left phone"> <a href="#" class="fa fa-phone"></a>&nbsp;4774773883<br> <a
-                    href="#" class="fa fa-clock-o"></a>&nbsp;10:00 AM - 10:00 PM<br>
-                  <a href="#" class="fa fa-map-marker"></a>&nbsp;Navallur
-                </p>
-
-              </div>
-            </div>
-            <div class="store card " onclick="changemap(3)">
-              <div class="card-body">
-                <h5 class="card-title">Forum Mall</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2nd floor, next to taco bell</h6>
-                <hr>
-                <p class="card-text text-left phone"> <a href="#" class="fa fa-phone"></a>&nbsp;4774773883<br> <a
-                    href="#" class="fa fa-clock-o"></a>&nbsp;10:00 AM - 10:00 PM<br>
-                  <a href="#" class="fa fa-map-marker"></a>&nbsp;Navallur
-                </p>
-
-              </div>
-            </div>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-lg-9 col-md-9 col-xl-9 order-1">
-          <iframe id="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1945.0551755923684!2d80.22821489837975!3d12.836145113310861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525a5ed3d3509d%3A0x51ba8d5c2f099ebb!2sTHE%20MARINA%20MALL!5e0!3m2!1sen!2sin!4v1621926910314!5m2!1sen!2sin"
-            width="90%" height="450" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="col-12 col-sm-6 col-lg-6 col-md-6 col-xl-6 order-1 cart">
+          <hr>
+          <h2>Your Cart &nbsp;<i class="fa fa-shopping-cart"></i></h2>
+          <hr>
+          <div id="cartitems" class="cartitems">
+            <h5>Your cart is currently empty!</h5>
+          </div>
         </div>
       </div>
     </div>
@@ -137,11 +93,8 @@
               and place your order! Feel
               free to contact us in case you have any questions. </p>
           </div>
-
           <div class="col-xs-6 col-md-3 pagelinks">
-
           </div>
-
           <div class="col-xs-6 col-md-3 pagelinks">
             <h6>Quick Links</h6>
             <ul class="footer-links">
@@ -214,7 +167,107 @@
         opacity: 0,
         duration: 1000,
         delay: 1000
-      });</script>
+      });
+  </script>
+  <script>
+    var menuitems = [{ image: "glazed.png", price: 98, name: "Original Glazed", desc: "Our signature glazed donut", added: false },
+    { image: "chocosprinkles.png", price: 108, name: "Choco Sprinkles", desc: "Choco frosted with rainbow sprinkle", added: false },
+    { image: "straw.png", price: 108, name: "Berry Sprinkles", desc: "Strawberry frosted with sprinkles", added: false },
+    { image: "choco.png", price: 98, name: "Choco Glazed", desc: "Chocolate icing on our Original Glazed", added: false },
+    { image: "oreo.png", price: 145, name: "Oreo Filled", desc: "Filled with Oreo Cookies and Kreme", added: false },
+    { image: "cinn.png", price: 108, name: "Cinnamon", desc: "The cinnamon powdered donut", added: false },
+    { image: "vanchoco.png", price: 125, name: "Vanilla Choco Chip", desc: "Vanilla frosted with choco chips", added: false },
+    { image: "choconut.png", price: 125, name: "Choco Nuts", desc: "Chocolate frosted with roasted nuts", added: false }
+    ]
+    var cart = [0, 0, 0, 0, 0, 0, 0, 0]
+    var cartitems = 0
+    var totalprice = 0
+    function displayItems() {
+      newitems = ""
+      for (var item in menuitems) {
+        var x = menuitems[item]
+        newitem = " <div class=\"card \" id=\""
+        newitem += item
+        newitem += "\"> <div class=\"row no-gutters\"><div class=\"col-md-4\"> <img src=\""
+        newitem += "./assets/menu/" + x.image;
+        newitem += "\"> </div ><div class=\"col-md-8\"> <div class=\"card-body\"> <h5 class=\"card-title\">"
+        newitem += x.name
+        newitem += "</h5><p class=\"card-text desc\">"
+        newitem += x.desc
+        newitem += "</p>"
+        newitem += "<div class=\"row quant\"><button onclick=\"addCart()\" class=\"addcart\">Add to Cart &nbsp;<i class=\"fa fa-shopping-cart\"></i></button></div>"
+        newitem += "</div > </div ></div > </div > "
+        newitems += newitem
+      }
+      document.getElementById("menuitems").innerHTML = newitems;
+    }
+    function addCart() {
+      var index = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+      menuitems[index].added = true
+      totalprice += menuitems[index].price
+      event.target.parentElement.innerHTML = "<button onclick=\"removeone()\" id=\"remove\">-</button><p class=\"numdonuts\" id=\"numdonuts" + index + "\">1</p><button onclick=\"addone()\" id=\"add\">+</button>"
+      if (cart[index] == 0)//item not yet added
+      {
+        var newrow = "<tr><td>" + menuitems[index].name + "</td><td>1</td><td>" + "₹&nbsp;" + menuitems[index].price + "</td></tr>"
+        if (cartitems == 0) {
+          document.getElementById("cartitems").innerHTML = "<table><thead><tr><th>Product</th><th>Quantity</th><th>Price</th></tr></thead><tbody id=\"items\"" + newrow + "</tbody><tfoot><tr><th >Total Price</th><th></th><th id=\"totalprice\">" + "₹&nbsp;" + totalprice + "</th></tr></tfoot></table>" + "<button onclick=\"addCart()\" style=\"margin-top:1em\"class=\"addcart\">Proceed to buy</button>"
+        }
+        else {
+          document.getElementById("items").innerHTML += newrow
+          document.getElementById("totalprice").innerHTML = "₹&nbsp;" + totalprice
+        }
+      }
+      cart[index] += 1
+      cartitems += 1
+    }
+    function addone() {
+      var index = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.id
+      cartitems += 1
+      cart[index] += 1
+      var search = menuitems[index].name
+      var table = document.getElementById("items").getElementsByTagName("tr")
+      for (var x in table) {
+        if (table[x].getElementsByTagName("td")[0].innerHTML === search) {
+          table[x].getElementsByTagName("td")[1].innerHTML = cart[index]
+          table[x].getElementsByTagName("td")[2].innerHTML = "₹&nbsp;" + cart[index] * menuitems[index].price
+          totalprice += menuitems[index].price
+          break;
+        }
+      }
+      document.getElementById("totalprice").innerHTML = "₹&nbsp;" + totalprice
+      var searchindex = "numdonuts" + index
+      var cards = document.getElementById(searchindex)
+      cards.innerHTML = cart[index]
+    }
+    function removeone() {
+      var index = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.id
+      cartitems -= 1
+      cart[index] -= 1
+      var search = menuitems[index].name
+      var table = document.getElementById("items").getElementsByTagName("tr")
+      for (var x in table) {
+        if (table[x].getElementsByTagName("td")[0].innerHTML === search) {
+          totalprice -= menuitems[index].price
+          if (cart[index] == 0) {
+            event.target.parentElement.innerHTML = "<button onclick=\"addCart()\" class=\"addcart\">Add to Cart &nbsp;<i class=\"fa fa-shopping-cart\"></i></button>"
+            document.getElementById("items").removeChild(table[x])
+          }
+          else {
+            table[x].getElementsByTagName("td")[1].innerHTML = cart[index]
+            table[x].getElementsByTagName("td")[2].innerHTML = "₹&nbsp;" + cart[index] * menuitems[index].price
+            var searchindex = "numdonuts" + index
+            var cards = document.getElementById(searchindex)
+            cards.innerHTML = cart[index]
+          }
+          break;
+        }
+      }
+      document.getElementById("totalprice").innerHTML = "₹&nbsp;" + totalprice
+      if (cartitems == 0)
+        document.getElementById("cartitems").innerHTML = "<h5>Your cart is currently empty!</h5>"
+      console.log(document.getElementById("cartitems"))
+    }
+  </script>
 </body>
 
 

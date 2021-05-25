@@ -303,3 +303,11 @@ h6 {
   transition: none;
   opacity: unset;
 }
+
+@media (min-width: 760px) {
+  .blob {
+    background-image: url("../assets/blob1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
