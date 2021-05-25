@@ -65,3 +65,19 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.store {
+  border-radius: 20px;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.store:hover {
+  cursor: pointer;
+}
+.selectedstore {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #d1ffdb,
+    rgba(25, 255, 204, 0.8)
+  );
+}
