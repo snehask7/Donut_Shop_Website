@@ -58,6 +58,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.parallax2 {
+  background-image: url("../assets/home/cover.jpg");
+  min-height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .counterround {
   margin-left: auto;
