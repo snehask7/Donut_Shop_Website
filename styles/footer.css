@@ -33,12 +33,12 @@
 .footer-links li {
   display: block;
 }
-.footer-links a {
+.footer-links i {
   color: #737373;
 }
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
+.footer-links i:active,
+.footer-links i:focus,
+.footer-links i:hover {
   color: #3366cc;
   text-decoration: none;
 }
@@ -48,7 +48,7 @@
 .footer .social-icons {
   text-align: right;
 }
-.footer .social-icons a {
+.footer .social-icons i {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -89,7 +89,7 @@
   font-weight: 700;
   font-size: 13px;
 }
-.social-icons a {
+.social-icons i {
   background-color: #eceeef;
   color: #818a91;
   font-size: 16px;
@@ -104,28 +104,28 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social-icons a:active,
-.social-icons a:focus,
-.social-icons a:hover {
+.social-icons i:active,
+.social-icons i:focus,
+.social-icons i:hover {
   color: #fff;
   background-color: #29aafe;
 }
-.social-icons.size-sm a {
+.social-icons.size-sm i {
   line-height: 34px;
   height: 34px;
   width: 34px;
   font-size: 14px;
 }
-.social-icons a.facebook:hover {
+.social-icons i.facebook:hover {
   background-color: #3b5998;
 }
-.social-icons a.twitter:hover {
+.social-icons i.twitter:hover {
   background-color: #00aced;
 }
-.social-icons a.linkedin:hover {
+.social-icons i.linkedin:hover {
   background-color: #007bb6;
 }
-.social-icons a.instagram:hover {
+.social-icons i.instagram:hover {
   background-color: #ea4c89;
 }
 @media (max-width: 767px) {
