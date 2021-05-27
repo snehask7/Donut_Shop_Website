@@ -70,11 +70,12 @@ h1 {
 }
 
 .storecontainer ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #5e72eb;
+  border-radius: 1em !important;
 }
 
 .storecontainer ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #5e72eb;
 }
 .flex-wrapper {
   display: flex;
@@ -85,16 +86,17 @@ h1 {
 
 .store {
   border-radius: 20px;
+  margin-bottom: 1em;
   margin-top: 1em;
   margin-right: auto;
   margin-left: auto;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .store:hover {
   cursor: pointer;
 }
 .selectedstore {
-  border: 7px solid #aa57f7;
+  box-shadow: 10px 10px 10px #5e72eb;
 }
 
 .phone {

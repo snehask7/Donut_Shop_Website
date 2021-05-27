@@ -19,8 +19,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-  <!-- Counter -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,15 +26,13 @@
   <link rel="stylesheet" href="./styles/order.css">
   <link rel="stylesheet" href="./styles/nav.css">
   <link rel="stylesheet" href="./styles/footer.css">
-  <!-- Glider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
   <!-- icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onload="displayItems()">
   <div>
-    <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background:rgba(23, 162, 184, 1)">
+    <nav data-aos="fade-down" class="navbar navbar-expand-lg fixed-top  navbar-light" style="background:#47cacc">
       <img width="188" class="logo" src="./assets/donutlogo.png" alt="logo"></img>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,24 +68,66 @@
         <div class="col-12 col-sm-6 col-lg-6 col-md-6 col-xl-6 order-2 order-sm-1 order-lg-1 order-md-1 order-xl-1"
           style="overflow-y:scroll;height:650px;">
           <div class="row text-center menuitems" id="menuitems">
-
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-6 col-md-6 col-xl-6 order-1 cart">
-          <hr>
-          <h2>Your Cart &nbsp;<i class="fa fa-shopping-cart"></i></h2>
-          <hr>
-          <div id="cartitems" class="cartitems">
-            <h5>Your cart is currently empty!</h5>
+          <div class="aboutdiv">
+            <hr>
+            <h2>Your Cart &nbsp;<i class="fa fa-shopping-cart"></i></h2>
+            <hr>
+            <div id="cartitems" class="cartitems">
+              <h5>Your cart is currently empty!</h5>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal" id="modalcontent">
+          <div>
+            <h4>Enter your details</h4>
+            <form class="orderform">
+              <div class="form-group row">
+                <label for="inputPassword" class="col-form-label">Name</label>
+                <div>
+                  <input type="text" class="form-control" id="inputPassword">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-form-label">Phone</label>
+                <div>
+                  <input type="text" class="form-control" id="inputPassword">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="addr" class="col-form-label">Address</label>
+                <div>
+                  <textarea class="form-control" id="addr"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="pincode" class="col-form-label">Pincode</label>
+                <div>
+                  <input type="text" class="form-control" id="pincode">
+                </div>
+              </div>
+              <div class="row" style="margin-left: auto;margin-right: auto;justify-content: center;">
+                <div onclick="closemodal()" class="addcart">Cancel</div>
+                <div onclick="placeorder()" class="addcart">Place Order</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container pagelinks">
         <div class="row" style="margin-bottom: -1em; ">
           <div class="col-sm-12 col-md-6">
-            <img width="188" class="logo" src="./assets/donutlogo.png" alt="logo" style="margin-bottom: 1em;"></img>
+            <img class="footerlogo" src="./assets/donutlogo.png" alt="logo"></img>
 
             <p class="text-justify">What are you waiting for? Go visit your nearest donut empire store right away or
               call
@@ -133,23 +171,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script>
     AOS.init();
-    maps = ["https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1945.0551755923684!2d80.22821489837975!3d12.836145113310861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525a5ed3d3509d%3A0x51ba8d5c2f099ebb!2sTHE%20MARINA%20MALL!5e0!3m2!1sen!2sin!4v1621926910314!5m2!1sen!2sin", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.641763891864!2d80.2619957147585!3d13.058459816499731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d9a9c244571%3A0x8795a1a0b7a4534b!2sExpress%20Avenue!5e0!3m2!1sen!2sin!4v1621927182922!5m2!1sen!2sin", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2938856240453!2d80.19494331475866!3d13.080551716017515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526402be882bef%3A0xad2f3f45016d6710!2sVR%20Chennai!5e0!3m2!1sen!2sin!4v1621927268571!5m2!1sen!2sin", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7825354858505!2d80.20675891475847!3d13.049509716694851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c26e87fd4d%3A0x6b32d4e16c16192!2sForum%20mall%20Vadapalani!5e0!3m2!1sen!2sin!4v1621927315427!5m2!1sen!2sin"]
-    function changemap(index) {
-      document.getElementById("map").src = maps[index]
-    }
-    var btns = document.getElementsByClassName("store");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("selectedstore");
-        current[0].className = current[0].className.replace("selectedstore", "");
-        this.className += " selectedstore";
-      });
-    }
-
-  </script>
-  <script>var textWrapper = document.querySelector('.ml1 .letters');
+    var textWrapper = document.querySelector('.ml1 .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
     anime.timeline({ loop: true })
       .add({
         targets: '.ml1 .letter',
@@ -211,9 +234,11 @@
       event.target.parentElement.innerHTML = "<button onclick=\"removeone()\" id=\"remove\">-</button><p class=\"numdonuts\" id=\"numdonuts" + index + "\">1</p><button onclick=\"addone()\" id=\"add\">+</button>"
       if (cart[index] == 0)//item not yet added
       {
-        var newrow = "<tr><td>" + menuitems[index].name + "</td><td>1</td><td>" + "₹&nbsp;" + menuitems[index].price + "</td></tr>"
+        var newrow = "<tr ><td>" + menuitems[index].name + "</td><td>1</td><td>" + "₹&nbsp;" + menuitems[index].price + "</td></tr>"
         if (cartitems == 0) {
-          document.getElementById("cartitems").innerHTML = "<table><thead><tr><th>Product</th><th>Quantity</th><th>Price</th></tr></thead><tbody id=\"items\"" + newrow + "</tbody><tfoot><tr><th >Total Price</th><th></th><th id=\"totalprice\">" + "₹&nbsp;" + totalprice + "</th></tr></tfoot></table>" + "<button onclick=\"addCart()\" style=\"margin-top:1em\"class=\"addcart\">Proceed to buy</button>"
+          document.getElementById("cartitems").innerHTML = "<table data-aos=\"fade-right\"><thead><tr><th>Product</th><th>Quantity</th><th>Price</th></tr></thead><tbody id=\"items\"" + newrow + "</tbody><tfoot><tr><th >Total Price</th><th></th><th id=\"totalprice\">" + "₹&nbsp;" + totalprice + "</th></tr></tfoot></table>"
+          console.log(document.getElementById("formmodal"))
+          document.getElementById("cartitems").innerHTML += "<button class=\"addcart\" style=\"margin-top:1em\" onClick=\"openmodal()\">Proceed to buy</button>"
         }
         else {
           document.getElementById("items").innerHTML += newrow
@@ -269,6 +294,19 @@
       if (cartitems == 0)
         document.getElementById("cartitems").innerHTML = "<h5>Your cart is currently empty!</h5>"
       console.log(document.getElementById("cartitems"))
+    }
+    function openmodal() {
+      document.getElementById("modal-container").removeAttribute("class");
+      document.getElementById("modal-container").classList.add("formmodal");
+      document.body.classList.add("formmodal");
+    }
+    function closemodal() {
+      document.getElementById("modal-container").classList.add("out");
+      document.getElementById("modal-container").classList.remove("formmodal"); document.getElementById("modal-container").classList.remove("formmodal");
+      document.getElementById("modal-container").classList.remove("modal-active");
+    }
+    function placeorder() {
+      document.getElementById("modalcontent").innerHTML = "<h5 onclick=\"location.reload()\"style=\"text-align:right\"><i  class=\"fa fa-close\"></i></h5><img alt=\"success\" class=\"success\"src=\"./assets/ordersuccess.png\"><br><h5>Your order has been placed! You will be receiving a call shortly from your nearest donut empire store.</h5>"
     }
   </script>
 </body>

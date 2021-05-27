@@ -31,7 +31,8 @@
   list-style: none;
 }
 .footer-links li {
-  display: block;
+  display: inline;
+  margin-right: 2em;
 }
 .footer-links i {
   color: #737373;
@@ -137,4 +138,7 @@
   .pagelinks {
     display: none;
   }
+}
+.footerlogo {
+  width: 35% !important;
 }

@@ -6,21 +6,33 @@
   font-size: 20px;
   border-radius: 30px !important;
   margin-right: 1em;
+  text-shadow: 1px 1px rgb(0, 0, 0, 0, 0.8);
 }
 
 .activenav {
-  background-color: #30d5c8 !important;
+  background-color: #1f2f98 !important;
   border-radius: 30px !important;
 }
-
+.logo {
+  width: 20%;
+}
 @media (max-width: 991.5px) {
   .navbar {
-    background-color: rgba(23, 162, 184, 1) !important;
+    background-color: #4adede !important;
   }
   .activenav {
     background-color: transparent !important;
   }
   .selected {
     all: initial;
+  }
+  .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 295px) {
+  .logo {
+    width: 180px;
   }
 }
