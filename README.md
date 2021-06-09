@@ -1,3 +1,3 @@
-# Design Jam 2.0 Submissoin
+# Donut Shop Website
 
-### Donut website coded from scratch for the advanced category of Design Jam 2.0
+### A website made for donuts coded from scratch using HTML,CSS and Javascript
